@@ -31,6 +31,10 @@ group :development, :test do
   gem 'rspec-rails', '~> 5.0.0'
   gem 'factory_bot_rails'
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+  gem 'rubocop', require: false # Ruby code quality scanner
+  gem 'rubocop-performance' # rubocop performance cops
+  gem 'rubocop-rails' # rubocop rails cops
+  gem 'rubocop-rspec', '~> 1.41.0', require: false # Integration with RSpec
 end
 
 group :development do

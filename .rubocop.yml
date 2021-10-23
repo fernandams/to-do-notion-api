@@ -1,0 +1,66 @@
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 2.6
+  Include:
+    - app/**/*.rb
+    - config/**/*.rb
+    - lib/**/*.rb
+    - spec/**/*.rb
+  Exclude:
+    -  bin/**/*
+    -  node_modules/**/*
+    -  vendor/**/*
+    - config/environments/development.rb
+    - config/environments/production.rb
+    - config/environments/staging.rb
+
+require:
+  - rubocop-rails
+  - rubocop-performance
+
+Metrics/BlockLength:
+  Exclude:
+    - config/initializers/simple_form_bootstrap.rb
+    - 'spec/**/*.rb'
+    - config/routes.rb
+    - config/environments/production.rb
+Layout/LineLength:
+  Max: 100
+  Exclude:
+    - config/environments/production.rb
+    - config/environments/development.rb
+    - config/environments/test.rb
+    - config/initializers/backtrace_silencers.rb
+    - config/initializers/content_security_policy.rb
+    - config/initializers/wrap_parameters.rb
+    - config/initializers/devise.rb
+    - config/initializers/simple_form.rb
+    - config/initializers/simple_form_bootstrap.rb
+    - config/puma.rb
+Rails:  
+  Enabled: true
+Lint/RaiseException:
+  Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
+Rails/HttpPositionalArguments:
+  Enabled: true
+Style/Documentation:
+  Enabled: false
+Style/AccessModifierDeclarations:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Style/MethodDefParentheses:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 20
+  Exclude:
+    - 'spec/**/*.rb'
