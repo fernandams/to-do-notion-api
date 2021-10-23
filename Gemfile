@@ -28,6 +28,13 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 5.0.0'
+  gem 'factory_bot_rails'
+  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+  gem 'rubocop', require: false # Ruby code quality scanner
+  gem 'rubocop-performance' # rubocop performance cops
+  gem 'rubocop-rails' # rubocop rails cops
+  gem 'rubocop-rspec', '~> 1.41.0', require: false # Integration with RSpec
 end
 
 group :development do
@@ -37,5 +44,13 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :test do
+  gem "webmock"
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'rest-client'
+
+
