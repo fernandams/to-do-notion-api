@@ -25,6 +25,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
+gem 'notion-sdk-ruby'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -35,6 +37,7 @@ group :development, :test do
   gem 'rubocop-performance' # rubocop performance cops
   gem 'rubocop-rails' # rubocop rails cops
   gem 'rubocop-rspec', '~> 1.41.0', require: false # Integration with RSpec
+  gem 'dotenv-rails'
 end
 
 group :development do
